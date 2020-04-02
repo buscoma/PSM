@@ -41,23 +41,48 @@ public class APP3 {
 		m.ponerNelementosCola(cola2, 3);
 		System.out.println("Cola2:");
 		m.mostrarCola(cola2);
-		if(m.compararFinalColas(cola1, cola2)) {
+		if(m.compararFinalColas(cola1, cola2))
 			System.out.println("Tienen el mismo final");
-		}else {
+		else
 			System.out.println("No tienen el mismo final");
-		}
 		m.vaciarCola(cola2);
 		m.ponerNelementosCola(cola2, 5);
 		System.out.println("Ahora cola2 es:");
 		m.mostrarCola(cola2);
-		if(m.compararFinalColas(cola1, cola2)) {
+		if(m.compararFinalColas(cola1, cola2))
 			System.out.println("Tienen el mismo final");
-		}else {
+		else 
 			System.out.println("No tienen el mismo final");
-		}
+		m.vaciarCola(cola2);
 		
 		System.out.println("Determinar si una Cola es capicúa o no. Para ser capicúa debe cumplir\n" + 
 				"que el primer elemento es igual al último, el segundo igual al penúltimo, etc.");
+		cola2.encolar(3);cola2.encolar(2);cola2.encolar(1);cola2.encolar(2);cola2.encolar(3);
+		System.out.println("Cola1");
+		m.mostrarCola(cola1);
+		if(m.colaCapicua(cola1))
+			System.out.println("Es capicua");
+		else
+			System.out.println("No es capicua");
+		System.out.println("Cola2");
+		m.mostrarCola(cola2);
+		if(m.colaCapicua(cola2))
+			System.out.println("Es capicua");
+		else
+			System.out.println("No es capicua");
+		m.vaciarCola(cola2);
+		
+		System.out.println("Determinar si la Cola C1 es la inversa de la Cola C2. Dos Colas serán\n" +
+				"inversas, si tienen los mismos elementos pero en orden inverso");
+		m.copiarColaCola(cola1, cola2);
+		m.invertirCola2(cola2);
+		System.out.println("Cola1");
+		m.mostrarCola(cola1);
+		System.out.println("Cola2");
+		m.mostrarCola(cola2);
+		if(m.colaInvertidaCola(cola1, cola2)) {
+			System.out.println("Es una cola invertida");
+		}
 	}
 	
 }

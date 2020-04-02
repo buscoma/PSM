@@ -137,6 +137,16 @@ public class Methods {
 		}
 	}
 	
+	public void copiarColaCola(ColaTDA origen, ColaTDA destino) {
+		ColaTDA colaAuxiliar = new Cola();
+		colaAuxiliar.inicializarCola();
+		while(!origen.colaVacia()) {
+			colaAuxiliar.encolar(origen.primero());
+			destino.encolar(origen.primero());
+			origen.desencolar();
+		}
+		pasarColaCola(colaAuxiliar, origen);
+	}
 	
 	public void pasarColaCola(ColaTDA origen, ColaTDA destino) {
 		while (!origen.colaVacia()) {
@@ -189,5 +199,38 @@ public class Methods {
 		return !cola1.colaVacia() && !cola2.colaVacia() && cola1.primero() == cola2.primero();
 	} 
 	
+	public boolean colaCapicua(ColaTDA cola) {
+		ColaTDA colaAuxiliar1 = new Cola();
+		ColaTDA colaAuxiliar2 = new Cola();
+		colaAuxiliar1.inicializarCola();
+		colaAuxiliar2.inicializarCola();
+		copiarColaCola(cola, colaAuxiliar1);
+		copiarColaCola(cola, colaAuxiliar2);
+		invertirCola2(colaAuxiliar2);
+		while(!colaAuxiliar1.colaVacia()){
+			if(colaAuxiliar1.primero() == colaAuxiliar2.primero()) {
+				colaAuxiliar1.desencolar();
+				colaAuxiliar2.desencolar();
+			} else
+				return false;
+		}
+		return true;
+	}
 	
+	public boolean colaInvertidaCola(ColaTDA cola1, ColaTDA cola2) {
+		ColaTDA colaAuxiliar1 = new Cola();
+		ColaTDA colaAuxiliar2 = new Cola();
+		colaAuxiliar1.inicializarCola();
+		colaAuxiliar2.inicializarCola();
+		copiarColaCola(cola1, colaAuxiliar1);
+		copiarColaCola(cola2, colaAuxiliar2);
+		invertirCola2(colaAuxiliar2);
+		while(!colaAuxiliar1.colaVacia() && !colaAuxiliar2.colaVacia()) {
+			if(colaAuxiliar1.primero() != colaAuxiliar2.primero())
+				return false;
+			colaAuxiliar1.desencolar();
+			colaAuxiliar2.desencolar();
+		}
+		return true;	
+	}
 }

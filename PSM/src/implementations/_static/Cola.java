@@ -7,7 +7,7 @@ public class Cola implements ColaTDA {
 	int cantidad;
 	
 	public void inicializarCola() {
-		vector = new int[100];
+		vector = new int[5];
 		cantidad = 0;
 	}
 
