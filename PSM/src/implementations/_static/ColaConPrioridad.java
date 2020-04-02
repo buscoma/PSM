@@ -3,38 +3,44 @@ package implementations._static;
 import interfaces.ColaConPrioridadTDA;
 
 public class ColaConPrioridad implements ColaConPrioridadTDA {
+	class Elem{
+		int valor, prioridad;
+	}
+	Elem []vector;
+	int cantidad;
 
-	@Override
 	public void inicializarCola() {
-		// TODO Auto-generated method stub
+		vector = new Elem[100];
+		cantidad = 0;
+		
 	}
 
-	@Override
 	public void acolarConPrioridad(int valor, int valor_prioridad) {
-		// TODO Auto-generated method stub
+		int i = cantidad -1;
+		while(i >= 0 && vector[i].prioridad >= valor_prioridad) {
+			vector[i + 1] = vector[i];
+			i--;
+		}
+		vector[i+1] = new Elem();
+		vector[i+1].valor = valor;
+		vector[i+1].prioridad = valor_prioridad;
+		cantidad++;
 	}
 
-	@Override
 	public void desencolar() {
-		// TODO Auto-generated method stub
+		cantidad--;
 	}
 
-	@Override
 	public int primero() {
-		// TODO Auto-generated method stub
-		return 0;
+		return vector[cantidad-1].valor;
 	}
 
-	@Override
 	public boolean colaVacia() {
-		// TODO Auto-generated method stub
-		return false;
+		return cantidad == 0;
 	}
 
-	@Override
 	public int prioridad() {
-		// TODO Auto-generated method stub
-		return 0;
+		return vector[cantidad-1].prioridad;
 	}
 
 }

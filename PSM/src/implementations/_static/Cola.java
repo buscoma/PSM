@@ -3,32 +3,37 @@ package implementations._static;
 import interfaces.ColaTDA;
 
 public class Cola implements ColaTDA {
-
-	@Override
+	int [] vector;
+	int cantidad;
+	
 	public void inicializarCola() {
-		// TODO Auto-generated method stub
+		vector = new int[100];
+		cantidad = 0;
 	}
 
-	@Override
 	public void encolar(int valor) {
-		// TODO Auto-generated method stub
+		vector[cantidad] = valor;
+		cantidad++;
 	}
 
 	@Override
 	public void desencolar() {
-		// TODO Auto-generated method stub
+		int i = 0;
+		while(i < cantidad - 1) {
+			vector[i] = vector[i+1];
+			i++;
+		}
+		cantidad--;
 	}
 
 	@Override
 	public int primero() {
-		// TODO Auto-generated method stub
-		return 0;
+		return vector[0];
 	}
 
 	@Override
 	public boolean colaVacia() {
-		// TODO Auto-generated method stub
-		return false;
+		return cantidad == 0;
 	}
 
 }

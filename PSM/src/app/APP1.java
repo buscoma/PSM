@@ -5,7 +5,7 @@ import interfaces.PilaTDA;
 
 public class APP1 {
 	public static void main(String[] args) {
-		PilaTDA mi_pila = new Pila(); // Create Pila with the implementation
+		PilaTDA mi_pila = new Pila();
 		mi_pila.inicializarPila();
 		for(int i=1; i<= 5; i++) {
 			System.out.println("Metemos el valor "+ i);

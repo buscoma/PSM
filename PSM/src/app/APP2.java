@@ -15,25 +15,34 @@ public class APP2 {
 		
 		Methods m = new Methods();
 		
-		for (int i=1; i<=5; i++) {
-			pila1.apilar(i);
-		}
-		System.out.println("La pila1 tiene los siguientes valores:");
+		m.ponerNelementosPila(pila1, 5);
+		System.out.println("Tenemos la pila1 con lo siguiente:");
 		m.mostrarPila(pila1);
 		
-		System.out.println("La pila2 tiene los siguientes valores:");
+		System.out.println("Pasar una Pila a otra (dejándola en orden inverso)");
+		m.pasarPilaPila(pila1, pila2);
 		m.mostrarPila(pila2);
+		m.pasarPilaPila(pila2, pila1);
 		
-		System.out.println("Copio la pila1 a la pila2");
+		System.out.println("Copiar una Pila en otra (dejándola en el mismo orden que la original)");
 		m.copiarPilaPila(pila1, pila2);
-		
-		System.out.println("La pila1 tiene los siguientes valores:");
-		m.mostrarPila(pila1);
-		
-		System.out.println("La pila2 tiene los siguientes valores:");
 		m.mostrarPila(pila2);
+		m.vaciarPila(pila2);
 		
-		System.out.println("Termine!");
+		System.out.println("Invertir el contenido de una Pila.");
+		m.invertirPila(pila1);
+		m.mostrarPila(pila1);
+		m.invertirPila(pila1);
+		
+		System.out.println("Contar los elementos de una Pila");
+		System.out.println("Pila1 tiene " + m.contarElementosDePila(pila1) + " elementos");
+		
+		System.out.println("Sumar los elementos de una Pila");
+		System.out.println("La suma de los elementos de pila1 es " + m.sumarElementosDePila(pila1));
+		
+		System.out.println("Calcular el promedio de los elementos de una Pila");
+		System.out.println("El promedio de los elementos de pila1 es " + m.calcularPromedioElementosPila(pila1));
+		
 	}
 	
 }

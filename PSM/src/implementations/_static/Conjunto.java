@@ -3,38 +3,44 @@ package implementations._static;
 import interfaces.ConjuntoTDA;
 
 public class Conjunto implements ConjuntoTDA {
+	int [] vector;
+	int cantidad;
 
-	@Override
 	public void inicializarConjunto() {
-		// TODO Auto-generated method stub
+		vector = new int[100];
+		cantidad = 0;
 	}
 
-	@Override
 	public void agregar(int valor) {
-		// TODO Auto-generated method stub
+		if (! this.pertenece(valor)) {
+			vector[cantidad] = valor;
+			cantidad++;
+		}
 	}
 
-	@Override
 	public void sacar(int valor) {
-		// TODO Auto-generated method stub
+		if (this.pertenece(valor)) {
+			int i = 0;
+			while (i < cantidad && vector[i] != valor)
+				i++;
+			vector[i] = vector[cantidad-1];
+			cantidad--;
+		}
 	}
 
-	@Override
 	public int elegir() {
-		// TODO Auto-generated method stub
-		return 0;
+		return vector[cantidad-1];
 	}
 
-	@Override
 	public boolean conjuntoVacio() {
-		// TODO Auto-generated method stub
-		return false;
+		return cantidad == 0;
 	}
 
-	@Override
 	public boolean pertenece(int valor) {
-		// TODO Auto-generated method stub
-		return false;
+		int i = 0;
+		while (i <= cantidad && vector[i] != valor)
+			i++;
+		return i < cantidad;
 	}
 
 }
