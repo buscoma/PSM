@@ -1,4 +1,4 @@
-package implementations._static;
+package implementaciones.estaticas;
 import interfaces.PilaTDA;
 
 // La condición de uso de esta implementación no debe superar los 100 elementos

@@ -1,8 +1,8 @@
 package app;
 
-import implementations._static.Cola;
+import implementaciones.estaticas.Cola;
 import interfaces.ColaTDA;
-import utils.Methods;
+import utilidades.MetodosCola;
 
 public class APP3 {
 
@@ -14,7 +14,7 @@ public class APP3 {
 		cola1.inicializarCola();
 		cola2.inicializarCola();
 		
-		Methods m = new Methods();
+		MetodosCola m = new MetodosCola();
 		
 		m.ponerNelementosCola(cola1, 5);
 		System.out.println("Tenemos la cola1 con lo siguiente:");

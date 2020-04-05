@@ -1,6 +1,6 @@
 package app;
 
-import implementations._static.Pila;
+import implementaciones.estaticas.Pila;
 import interfaces.PilaTDA;
 
 public class APP1 {

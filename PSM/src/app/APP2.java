@@ -1,8 +1,8 @@
 package app;
 
-import implementations._static.Pila;
+import implementaciones.estaticas.Pila;
 import interfaces.PilaTDA;
-import utils.Methods;
+import utilidades.MetodosPila;
 
 public class APP2 {
 	
@@ -13,7 +13,7 @@ public class APP2 {
 		pila1.inicializarPila();
 		pila2.inicializarPila();
 		
-		Methods m = new Methods();
+		MetodosPila m = new MetodosPila();
 		
 		m.ponerNelementosPila(pila1, 5);
 		System.out.println("Tenemos la pila1 con lo siguiente:");

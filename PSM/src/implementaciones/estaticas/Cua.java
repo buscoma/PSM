@@ -1,4 +1,4 @@
-package implementations._static;
+package implementaciones.estaticas;
 
 import interfaces.ConjuntoTDA;
 
