@@ -1,6 +1,6 @@
 package implementaciones.estaticas;
 
-import interfaces.ColaTDA;
+import apis.ColaTDA;
 
 public class Cola implements ColaTDA {
 	int [] vector;

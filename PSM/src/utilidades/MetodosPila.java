@@ -1,7 +1,7 @@
 package utilidades;
 
+import apis.PilaTDA;
 import implementaciones.estaticas.Pila;
-import interfaces.PilaTDA;
 
 public class MetodosPila {
 	

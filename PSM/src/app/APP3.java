@@ -1,7 +1,7 @@
 package app;
 
+import apis.ColaTDA;
 import implementaciones.estaticas.Cola;
-import interfaces.ColaTDA;
 import utilidades.MetodosCola;
 
 public class APP3 {

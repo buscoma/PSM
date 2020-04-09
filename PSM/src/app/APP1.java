@@ -1,7 +1,7 @@
 package app;
 
+import apis.PilaTDA;
 import implementaciones.estaticas.Pila;
-import interfaces.PilaTDA;
 
 public class APP1 {
 	public static void main(String[] args) {

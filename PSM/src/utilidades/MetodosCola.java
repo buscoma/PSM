@@ -1,9 +1,9 @@
 package utilidades;
 
+import apis.ColaTDA;
+import apis.PilaTDA;
 import implementaciones.estaticas.Cola;
 import implementaciones.estaticas.Pila;
-import interfaces.ColaTDA;
-import interfaces.PilaTDA;
 
 public class MetodosCola {
 

@@ -1,5 +1,5 @@
 package implementaciones.estaticas;
-import interfaces.PilaTDA;
+import apis.PilaTDA;
 
 // La condición de uso de esta implementación no debe superar los 100 elementos
 

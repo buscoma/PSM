@@ -1,6 +1,6 @@
 package implementaciones.estaticas;
 
-import interfaces.ConjuntoTDA;
+import apis.ConjuntoTDA;
 
 public class Cua implements ConjuntoTDA {
 	boolean [] vector;

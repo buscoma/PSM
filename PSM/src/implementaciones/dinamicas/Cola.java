@@ -1,9 +1,10 @@
 package implementaciones.dinamicas;
 
-import interfaces.ColaTDA;
+import apis.ColaTDA;
 
 public class Cola implements ColaTDA {
-	public class Nodo{
+	
+	private class Nodo {
 		int valor;
 		Nodo siguiente;
 	}
@@ -48,7 +49,7 @@ public class Cola implements ColaTDA {
 	}
 
 	public boolean colaVacia() {
-		return primer == null && ultimo == null;
+		return primer == null;
 	}
 
 }

@@ -1,10 +1,10 @@
 package implementaciones.dinamicas;
 
-import interfaces.PilaTDA;
+import apis.PilaTDA;
 
 public class Pila implements PilaTDA {
 
-	public class Nodo{
+	private class Nodo {
 		int valor;
 		Nodo siguiente;
 	}
@@ -21,31 +21,26 @@ public class Pila implements PilaTDA {
 	public void apilar(int valor) {
 		Nodo nuevo = new Nodo();
 		nuevo.valor = valor;
-		if (ultimo == null)
-			primer = ultimo = nuevo;
-		else
-			ultimo.siguiente = nuevo;
+		nuevo.siguiente = primer;
+		if (primer == null)
+			ultimo = nuevo;
+		primer = nuevo;
 	}
 
 	public void desapilar() {
-		
-		Nodo anterior = primer;
-		Nodo siguienteNodo = primer.siguiente;
-		while (anterior != null) {
-			anterior = siguienteNodo;
-			siguienteNodo = siguienteNodo.siguiente;
-		}
-		
-			
+		if (primer.siguiente != null)
+			primer = primer.siguiente;
+		else
+			primer = ultimo = null;
 		
 	}
 
 	public int tope() {
-		return ultimo.valor;
+		return primer.valor;
 	}
 
 	public boolean pilaVacia() {
-		return primer == null && ultimo == null;
+		return primer == null;
 	}
 
 }

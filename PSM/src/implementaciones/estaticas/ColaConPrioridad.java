@@ -1,6 +1,6 @@
 package implementaciones.estaticas;
 
-import interfaces.ColaConPrioridadTDA;
+import apis.ColaConPrioridadTDA;
 
 public class ColaConPrioridad implements ColaConPrioridadTDA {
 	class Elem{
@@ -15,15 +15,15 @@ public class ColaConPrioridad implements ColaConPrioridadTDA {
 		
 	}
 
-	public void acolarConPrioridad(int valor, int valor_prioridad) {
+	public void encolarConPrioridad(int valor, int prioridad) {
 		int i = cantidad -1;
-		while(i >= 0 && vector[i].prioridad >= valor_prioridad) {
+		while(i >= 0 && vector[i].prioridad >= prioridad) {
 			vector[i + 1] = vector[i];
 			i--;
 		}
 		vector[i+1] = new Elem();
 		vector[i+1].valor = valor;
-		vector[i+1].prioridad = valor_prioridad;
+		vector[i+1].prioridad = prioridad;
 		cantidad++;
 	}
 
