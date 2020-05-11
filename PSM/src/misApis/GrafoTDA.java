@@ -1,7 +1,5 @@
 package misApis;
 
-import misApis.ConjuntoTDA;
-
 public interface GrafoTDA {
 	void inicializarGrafo();
 
