@@ -2,6 +2,9 @@ package misImplementaciones.estaticas;
 
 import misApis.ColaTDA;
 
+/**
+ * @implSpec No debe superar mas de 100 elementos
+ */
 public class Cola implements ColaTDA {
 	int [] vector;
 	int cantidad;

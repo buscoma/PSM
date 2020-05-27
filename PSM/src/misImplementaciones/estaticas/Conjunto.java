@@ -2,6 +2,9 @@ package misImplementaciones.estaticas;
 
 import misApis.ConjuntoTDA;
 
+/**
+ * @implSpec No debe superar mas de 100 elementos
+ */
 public class Conjunto implements ConjuntoTDA {
 	int [] vector;
 	int cantidad;

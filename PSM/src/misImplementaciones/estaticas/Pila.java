@@ -1,8 +1,9 @@
 package misImplementaciones.estaticas;
 import misApis.PilaTDA;
 
-// La condición de uso de esta implementación no debe superar los 100 elementos
-
+/**
+ * @implSpec No debe superar mas de 100 elementos
+ */
 public class Pila implements PilaTDA {
 	
 	int [] vector;

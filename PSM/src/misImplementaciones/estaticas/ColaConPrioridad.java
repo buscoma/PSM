@@ -2,6 +2,9 @@ package misImplementaciones.estaticas;
 
 import misApis.ColaConPrioridadTDA;
 
+/**
+ * @implSpec No debe superar mas de 100 elementos
+ */
 public class ColaConPrioridad implements ColaConPrioridadTDA {
 	class Elem{
 		int valor, prioridad;
